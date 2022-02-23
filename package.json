@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "jsdoc": "^3.6.10",
+    "typescript": "^4.5.5"
+  },
+  "scripts": {
+    "watch": "tsc --watch ",
+    "build": "tsc -p .",
+    "docs": "jsdoc -c jsdoc.json"
+  },
+  "name": "backtracking2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}

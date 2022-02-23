@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backtracking</title>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <br />
+    <button id="reset">Reset</button>
+    <button id="pause">Pause</button>
+    <button id="grid">Hide Grid</button>
+    <br />
+    <br />
+    <button id="inc">Increase Speed</button>
+    <span id="speed">10</span>
+    <button id="dec">Decrease Speed</button>
+    <br />
+    <br />
+    <form>
+      <label for="rows">Rows: </label>
+      <input name="rows" id="rows" type="number" min="1" step="1" value="5" />
+      <label for="cols">Columns: </label>
+      <input name="cols" id="cols" type="number" min="1" step="1" value="5" />
+      <button id="apply" type="button">Apply</button>
+    </form>
+
+    <script src="./JS/Path.js"></script>
+    <script src="./JS/Point.js"></script>
+    <script src="./JS/grid.js"></script>
+    <script src="./JS/index.js"></script>
+    <script src="./JS/Controls.js"></script>
+  </body>
+</html>

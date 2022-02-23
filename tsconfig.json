@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+
+    "module": "commonjs",
+    "rootDir": "./TS",
+    "outDir": "dist/JS",
+    "removeComments": true,
+
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true
+  }
+}
