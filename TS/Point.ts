@@ -21,7 +21,7 @@ class Point {
         0,
         2 * Math.PI
       )
-      ctx.fillStyle = "blue"
+      ctx.fillStyle = "#08D9D6"
       ctx.fill()
       ctx.closePath()
     }

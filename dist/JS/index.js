@@ -5,8 +5,19 @@ let fps = 10;
 let finished = false;
 let running = true;
 let showGrid = true;
-canvas.width = 670;
-canvas.height = 600;
+canvas.width =
+    window.innerWidth > window.innerHeight
+        ? (window.innerHeight / 100) * 80
+        : (window.innerWidth / 100) * 80;
+canvas.height = canvas.width;
+window.addEventListener("resize", () => {
+    canvas.width =
+        window.innerWidth > window.innerHeight
+            ? (window.innerHeight / 100) * 80
+            : (window.innerWidth / 100) * 80;
+    canvas.height = canvas.width;
+    init();
+});
 let rows = 5, columns = 5;
 let spacingX = canvas.width / columns, spacingY = canvas.height / rows;
 let points;
@@ -15,14 +26,16 @@ let path;
 const init = () => {
     spacingX = canvas.width / columns;
     spacingY = canvas.height / rows;
-    running = true;
     points = [];
     grid = new Grid(rows, columns, spacingX, spacingY);
     path = new Path(spacingX, spacingY, points);
+    finished = false;
+    running = true;
+    animate();
 };
 const setup = () => {
     if (ctx) {
-        ctx.fillStyle = "black";
+        ctx.fillStyle = "#252A34";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
     }
     showGrid && grid.draw();
@@ -35,7 +48,7 @@ const update = () => {
             ctx.moveTo((pt.x + 1 / 2) * spacingX, (pt.y + 1 / 2) * spacingY);
             if (index !== points.length - 1)
                 ctx.lineTo((points[index + 1].x + 1 / 2) * spacingX, (points[index + 1].y + 1 / 2) * spacingY);
-            ctx.strokeStyle = "yellow";
+            ctx.strokeStyle = "#FF2E63";
             ctx.stroke();
             ctx.closePath();
             pt.draw().nextMove(index, points.length, path);
@@ -56,4 +69,3 @@ const animate = () => {
     }
 };
 init();
-animate();

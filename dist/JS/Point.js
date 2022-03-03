@@ -13,7 +13,7 @@ class Point {
         if (ctx) {
             ctx.beginPath();
             ctx.arc((this.x + 1 / 2) * this.spacingX, (this.y + 1 / 2) * this.spacingY, this.radius, 0, 2 * Math.PI);
-            ctx.fillStyle = "blue";
+            ctx.fillStyle = "#08D9D6";
             ctx.fill();
             ctx.closePath();
         }

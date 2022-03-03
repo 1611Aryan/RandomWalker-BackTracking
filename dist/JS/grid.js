@@ -12,7 +12,7 @@ class Grid {
                 if (ctx) {
                     ctx.beginPath();
                     ctx.lineWidth = 2;
-                    ctx.strokeStyle = "white";
+                    ctx.strokeStyle = "#EAEAEA";
                     ctx.moveTo(i * this.spacingX, j * this.spacingY);
                     ctx.lineTo((i + 1) * this.spacingX, j * this.spacingY);
                     ctx.lineTo((i + 1) * this.spacingX, (j + 1) * this.spacingY);

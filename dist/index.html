@@ -5,27 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Backtracking</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
   </head>
   <body>
+    <header>
+      <h1>Self Avoiding Walk with Backtracking</h1>
+    </header>
     <canvas id="canvas"></canvas>
-    <br />
-    <button id="reset">Reset</button>
-    <button id="pause">Pause</button>
-    <button id="grid">Hide Grid</button>
-    <br />
-    <br />
-    <button id="inc">Increase Speed</button>
-    <span id="speed">10</span>
-    <button id="dec">Decrease Speed</button>
-    <br />
-    <br />
-    <form>
-      <label for="rows">Rows: </label>
-      <input name="rows" id="rows" type="number" min="1" step="1" value="5" />
-      <label for="cols">Columns: </label>
-      <input name="cols" id="cols" type="number" min="1" step="1" value="5" />
-      <button id="apply" type="button">Apply</button>
-    </form>
+    <div class="controls">
+      <div class="row">
+        <div class="state-control">
+          <button id="reset">Reset</button>
+          <button id="pause">Pause</button>
+          <button id="grid">Hide Grid</button>
+        </div>
+        <div class="speed-control">
+          <button id="inc">Increase Speed</button>
+          <span class="speed" id="speed">10</span>
+          <button id="dec">Decrease Speed</button>
+        </div>
+      </div>
+
+      <form class="layout-control">
+        <div class="input">
+          <label for="rows">Rows: </label>
+          <input
+            name="rows"
+            id="rows"
+            type="number"
+            min="1"
+            step="1"
+            value="5"
+          />
+        </div>
+        <div class="input">
+          <label for="cols">Columns: </label>
+          <input
+            name="cols"
+            id="cols"
+            type="number"
+            min="1"
+            step="1"
+            value="5"
+          />
+        </div>
+        <button id="apply" type="button">Apply</button>
+      </form>
+    </div>
 
     <script src="./JS/Path.js"></script>
     <script src="./JS/Point.js"></script>
